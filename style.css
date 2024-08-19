@@ -1560,7 +1560,7 @@ footer hr {
 
     .testimonios-content h2 {
         top: initial;
-        font-size: 85px;
+        font-size: 60px;
         padding-top: 100px;
     }
 
@@ -1596,13 +1596,7 @@ footer hr {
         padding-top: 10px;
         padding-bottom: 10px;
     }
-
-
-    .footer p{
-    }
 }
-
-
 /* background-color: rgba(0, 0, 0, 0.3); 
 
     .testimonio-img-wrapper {
