@@ -1546,7 +1546,7 @@ footer hr {
     }
 
     .paquetes {
-        padding-top: 50px;
+        padding-top: 70px;
     }
 
     .btnpaquete {
@@ -1695,10 +1695,6 @@ footer hr {
     .testimonio-img {
         width: 100%;
         height: auto;
-    }
-
-    .testimonios-wrapper p {
-        display: none;
     }
 
     .testimonios {
