@@ -8,9 +8,9 @@ body {
     margin: 0;
 }
 
-/*Inicio del estilo para el banner*/
+/* Inicio del estilo para el banner */
 .banner {
-    background: url('Banner/fondo.png') no-repeat;
+    background: url('Banner/fondoescritorio.png') no-repeat;
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -19,63 +19,44 @@ body {
 }
 
 .banner-content {
-    max-width: 1166px;
-    max-height: 766px;
-    margin: 0 auto;
-    /*background-color: rgba(0, 0, 0, 0.3);*/
+    margin: 0 100px;
     color: white;
-}
-
-.logo {
-    padding-right: 180px;
 }
 
 .menu-bar {
     display: flex;
-    /* Mostrar los elementos del menú en una fila */
     align-items: center;
-    /* Centrar verticalmente los elementos del menú */
     padding-top: 47px;
-    /* Ajuste de espacio arriba del menú */
+    justify-content: space-between;
 }
 
-.menu-bar ul {
+.menu-bar ul.main-menu {
     list-style-type: none;
-    /* Quitar viñetas de la lista */
     padding: 0;
     margin: 0;
     display: flex;
-    /* Mostrar los elementos de la lista en una fila */
 }
 
-.menu-bar ul li {
+.menu-bar ul.main-menu li {
     margin-right: 71px;
-    /* Espacio entre cada ítem del menú */
 }
 
-.menu-bar ul li:last-child {
+.menu-bar ul.main-menu li:last-child {
     margin-right: 0;
-    /* Eliminar margen derecho del último ítem para evitar espacio adicional */
 }
 
-.menu-bar ul li a {
+.menu-bar ul.main-menu li a {
     color: white;
-    /* Color de texto blanco para los enlaces */
     text-decoration: none;
-    /* Quitar subrayado de los enlaces */
     font-size: 18px;
-    /* Tamaño de fuente 18px */
 }
 
-.menu-bar ul li a:hover {
+.menu-bar ul.main-menu li a:hover {
     font-weight: bold;
-    /* Hace que el texto sea más negrita al pasar el mouse */
-    /* Color de fondo al pasar el mouse */
 }
 
 .dropdown-menu ul {
     display: none;
-    /* Ocultar inicialmente los submenús */
     position: absolute;
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 1;
@@ -94,7 +75,6 @@ body {
 
 .fa-chevron-down:hover {
     color: #283618;
-    /* Cambia 'red' al color que desees */
 }
 
 .fa-chevron-down {
@@ -104,25 +84,18 @@ body {
 .banner-content h1 {
     padding-top: 117px;
     font-family: 'Bebas Neue', sans-serif;
-    /* Fuente Bebas Neue para h1 */
     font-size: 87.62px;
-    /* Tamaño de fuente específico */
     margin: 0;
-    /* Eliminar márgenes predeterminados */
     text-align: left;
-    /* ponerlo a la izquierda */
     font-weight: 387;
 }
 
 .banner-content p {
     font-size: 17px;
     width: 395px;
-    /* Ancho específico para el párrafo */
     text-align: justify;
-    /* Justificar el texto */
     margin-bottom: 20px;
     word-spacing: -1px;
-    /* Ajusta el espaciado de las palabras */
 }
 
 .banner-content button {
@@ -131,24 +104,72 @@ body {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 37px;
     padding: 10px 20px;
-    /* Espacio interno del botón */
     background-color: #BC6C25;
     color: white;
     border: none;
     cursor: pointer;
-    /* Cambiar el cursor al pasar por encima del botón */
     border-radius: 10px;
 }
 
 .banner-content button:hover {
     background-color: #90501a;
-    /* Color de fondo del botón al pasar el mouse */
 }
 
 .des-banner {
-    padding-top: 273px;
     display: flex;
     justify-content: space-between;
+}
+
+/* Menú hamburguesa */
+.hamburger-menu {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* Dropdown del menú hamburguesa */
+.hamburger-dropdown {
+    margin-right: 50px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    text-align: left;
+}
+
+.hamburger-dropdown li {
+    position: relative;
+    padding: 10px 20px;
+    list-style: none;
+}
+
+.hamburger-dropdown li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.hamburger-dropdown .dropdown-menu ul {
+    display: none;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.hamburger-dropdown .dropdown-menu ul li {
+    margin: 0;
+}
+
+.hamburger-dropdown .dropdown-menu ul li a {
+    color: white;
+}
+
+.hamburger-dropdown li:hover .dropdown-menu ul {
+    display: block;
 }
 
 /*Fin del estilo para el banner*/
@@ -1155,7 +1176,66 @@ footer hr {
 /*Final del estilo footer*/
 
 /*=========================== Media query 1300px ===========================*/
-@media screen and (max-width: 1300px) {
+    @media screen and (max-width: 1300px) {
+        .hamburger-menu {
+            display: block;
+        }
+    
+        .menu-bar ul.main-menu {
+            display: none;
+        }
+    
+        .menu-bar.active .hamburger-dropdown {
+            display: flex;
+        }
+        .banner {
+            background: url('Banner/fondotablet900.png') no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 505px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .logo {
+            width: 50px;
+            height: auto;
+        }
+    
+        .banner-content {
+            margin: 0 85px;
+            color: white;
+        }
+    
+        .banner-content h1 {
+            padding-top: 100px;
+            font-size: 57px;
+            margin: 0;
+            text-align: left;
+        }
+    
+        .banner-content p {
+            font-size: 11px;
+            width: 260px;
+            text-align: justify;
+            margin-bottom: 20px;
+            word-spacing: -1px;
+        }
+    
+        .mtb {
+            width: 263px;
+            height: auto;
+        }
+    
+        .banner-content button {
+            width: 117px;
+            height: 42px;
+            font-size: 24px;
+            padding: 6px 13px;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
 
     /*responsive ruta*/
     .ruta {
@@ -1337,6 +1417,61 @@ footer hr {
 
 /*=========================== Media query 900px ===========================*/
 @media screen and (max-width: 900px) {
+    .logo {
+        width: 30px;
+        height: auto;
+    }
+
+    .banner {
+        background: url('Banner/fondomovil.png') no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 397px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .banner-content {
+        margin: 0 30px;
+        color: white;
+    }
+
+    .banner-content h1 {
+        padding-top: 50px;
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 47.54px;
+        margin: 0;
+        text-align: left;
+    }
+
+    .banner-content p {
+        font-size: 9px;
+        width: 212px;
+        text-align: justify;
+        margin-bottom: 20px;
+        word-spacing: -1px;
+    }
+
+    .mtb {
+        width: 211px;
+        height: auto;
+    }
+
+    .banner-content button {
+        width: 90px;
+        height: 33px;
+        font-size: 18px;
+        padding: 5px 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .des-banner {
+        height: 48px;
+    }
+
+
     .ruta-content {
         margin: 0 25px;
     }
@@ -1525,6 +1660,9 @@ footer hr {
     }
 
     /*Responsive faq*/
+    .faq {
+        padding: initial;
+    }
     .faq-content {
         width: 300px;
     }
@@ -1586,7 +1724,7 @@ footer hr {
         padding: 16px 25px;
     }
 
-    .logo {
+    .logof {
         width: 203px;
         height: auto;
     }
@@ -1607,28 +1745,5 @@ footer hr {
     }
 
 }
-/* background-color: rgba(0, 0, 0, 0.3); 
 
-    .testimonio-img-wrapper {
-        position: relative;
-    }
-
-    
-
-    .testimonio-text {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-
-        color: #FEFAE0;
-        padding: 10px;
-        box-sizing: border-box;
-        text-align: justify;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-
-    .testimonio-img-wrapper:hover .testimonio-text {
-        opacity: 1;
-    }*/
+/* background-color: rgba(0, 0, 0, 0.3); */

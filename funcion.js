@@ -1,22 +1,21 @@
 
 // INCIO MENU DROPDPWN
-// Cuando el html este completamente cargado
 document.addEventListener('DOMContentLoaded', function () {
     const chevrons = document.querySelectorAll('.fa-chevron-down');
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const menuBar = document.querySelector('.menu-bar');
 
     chevrons.forEach(function (chevron) {
         chevron.addEventListener('click', function (event) {
             event.stopPropagation();
             const dropdownMenu = this.closest('li').querySelector('.dropdown-menu ul');
 
-            // Cerrar todos los menús desplegables abiertos
             document.querySelectorAll('.dropdown-menu ul').forEach(function (menu) {
                 if (menu !== dropdownMenu) {
                     menu.style.display = 'none';
                 }
             });
 
-            // Alternar el menú desplegable actual
             if (dropdownMenu.style.display === 'block') {
                 dropdownMenu.style.display = 'none';
             } else {
@@ -39,7 +38,13 @@ document.addEventListener('DOMContentLoaded', function () {
             event.stopPropagation();
         });
     });
+
+    // Evento para el menú hamburguesa
+    hamburgerMenu.addEventListener('click', function () {
+        menuBar.classList.toggle('active');
+    });
 });
+
 // FINAL MENU DROPDPWN
 
 // INICIO DROPDPWN DIAS
