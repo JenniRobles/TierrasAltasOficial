@@ -136,6 +136,29 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    const backToTopButton = document.querySelector('.back-to-top');
+
+    // Mostrar la flecha cuando se haya desplazado 100px hacia abajo
+    document.addEventListener('scroll', function () {
+        const scrollPosition = window.scrollY;
+
+        if (scrollPosition > 100) {
+            backToTopButton.style.display = 'block';
+        } else {
+            backToTopButton.style.display = 'none';
+        }
+    });
+
+    // Desplazamiento suave al hacer clic en la flecha
+    backToTopButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        document.querySelector('#banner').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+});
 
 
 

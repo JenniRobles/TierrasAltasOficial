@@ -1743,3 +1743,26 @@ footer hr {
 }
 
 /* background-color: rgba(0, 0, 0, 0.3); */
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #dcdcdc; /* Color blanco para la flecha */
+    font-size: 36px;
+    z-index: 1000;
+    cursor: pointer;
+    display: none;
+    text-align: center;
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Eliminar cualquier borde */
+    transition: color 0.3s; /* Transición suave del color */
+}
+
+.back-to-top:hover {
+    color: #dcdcdc; /* Color blanco más claro al pasar el ratón */
+}
+
+
+
+
