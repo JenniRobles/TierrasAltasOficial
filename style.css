@@ -1121,16 +1121,18 @@ footer {
 .footer-bottom {
     display: flex;
     flex-direction: column;
-    /* Cambia a columna para centrar el texto verticalmente */
+    /* Organiza los elementos en columna */
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    /* Alinea los elementos a la izquierda */
     width: 100%;
     /* Asegura que el contenedor ocupe el ancho completo disponible */
-    text-align: center;
-    /* Centra el texto dentro de los elementos si es necesario */
+    text-align: left;
+    /* Alinea el texto a la izquierda dentro de los elementos */
     margin-top: 30px;
     /* Añade espacio superior para separar del contenido anterior */
 }
+
 
 .footer-bottom p {
     font-family: 'PT Sans', sans-serif;
@@ -1392,7 +1394,7 @@ footer hr {
     }
 
     .accordion-button {
-        width: 341px;
+        width: 100%;
         height: 44px;
     }
 
@@ -1424,11 +1426,12 @@ footer hr {
     }
 
     .formulario-content {
-        padding: 85px;
+        padding: initial;
     }
 
     .form {
         width: 300px;
+        margin-top: 50px;
     }
 
     .form input[type="text"],
@@ -1447,7 +1450,8 @@ footer hr {
     }
 
     .formulario-content p {
-        width: initial;
+        text-align: justify;
+        width: 340px;
     }
 
 
@@ -1511,8 +1515,13 @@ footer hr {
     }
 
     .galeria-content h2 {
-        font-size: initial;
+        font-size: 25px;
         margin: 0;
+    }
+
+    .galeria-content p {
+        font-size: 10px;
+        text-align: justify;
     }
 
     /*Responsive faq*/
@@ -1574,7 +1583,7 @@ footer hr {
 
     /*Responsive footer*/
     footer {
-        padding: 16px 85px;
+        padding: 16px 25px;
     }
 
     .logo {
@@ -1586,9 +1595,9 @@ footer hr {
         margin: 0 auto;
     }
 
-    .footer-info {
-        flex-direction: column;
-        justify-content: center;
+    .footer-info p{
+        font-size: 20px;
+        color: #283618;
     }
 
     .footer-info .footer-left,
@@ -1596,6 +1605,7 @@ footer hr {
         padding-top: 10px;
         padding-bottom: 10px;
     }
+
 }
 /* background-color: rgba(0, 0, 0, 0.3); 
 
