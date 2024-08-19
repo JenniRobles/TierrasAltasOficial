@@ -44,8 +44,20 @@ document.addEventListener('DOMContentLoaded', function () {
         menuBar.classList.toggle('active');
     });
 });
-
 // FINAL MENU DROPDPWN
+
+// Desplazamiento suave para el menú principal
+document.querySelectorAll('.main-menu a, .hamburger-dropdown a, #inscribirse').forEach(anchor => {
+    anchor.addEventListener('click', function (event) {
+        event.preventDefault();
+        const targetId = this.getAttribute('href');
+        document.querySelector(targetId).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+
 
 // INICIO DROPDPWN DIAS
 document.querySelectorAll('.accordion-button').forEach(button => {
@@ -66,7 +78,7 @@ document.querySelectorAll('.accordion-button').forEach(button => {
 });
 // FINAL DROPDPWN DIAS
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Lógica del formulario principal
     const formElements = document.querySelectorAll('input[type="text"], input[type="date"], input[type="number"], input[type="email"], input[name="paquete"], input[type="checkbox"]');
     const submitButton = document.getElementById('Enviar');
