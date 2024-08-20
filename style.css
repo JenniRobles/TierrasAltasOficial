@@ -428,9 +428,8 @@ body {
 
 /*Estilo paginas para los paquetes*/
 .paquete1{
-    background-image: url(Paquetes/fondopaquete1.png);
+    background: url(Paquetes/fondopaquete1.png) center no-repeat;
     background-size: cover;
-    background-position: center;
     height: 100vh;
     width: 100%;
     margin: 0 auto;
@@ -1187,7 +1186,7 @@ footer hr {
     }
 
     .paquete1{
-        background-image: url(Paquetes/fondopaquete1.png);
+        background: url(Paquetes/fondopaquete1.png) ;
         background-size: cover;
         background-position: center;
         height: 100vh;
