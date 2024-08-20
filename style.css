@@ -8,6 +8,8 @@ body {
     margin: 0;
 }
 
+
+
 /* Inicio del estilo para el banner */
 .banner {
     background: url('Banner/fondoescritorio.png') no-repeat;
@@ -24,7 +26,7 @@ body {
 }
 
 .menu-bar {
-     
+
     display: flex;
     align-items: center;
     padding-top: 47px;
@@ -425,66 +427,30 @@ body {
 }
 
 /*Estilo paginas para los paquetes*/
-.paquete1 {
-    background-image: url(Paquetes/fondos.png);
-    width: 1366px;
-    height: 768px;
-    position: relative;
-    /* Asegura que los elementos posicionados absolutamente se basen en este contenedor */
-    overflow: hidden;
-    /* Asegura que nada se desborde fuera del contenedor */
+.paquete1{
+    background-image: url(Paquetes/fondopaquete1.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    margin: 0 auto;
 }
 
-.paquete1 h2 {
+.paquete1 h3{
+    font-size: 42px;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 400px;
-    /* Ajusta el tamaño de la fuente para que encaje en un solo renglón */
     font-weight: lighter;
-    text-align: center;
-    color: white;
-    opacity: 0.5;
-    /* Aplica una opacidad del 50% */
-    margin: 0;
-    position: absolute;
-    /* Permite que h1 se posicione en relación con .paquete1 */
-    top: 180px;
-    /* Posiciona verticalmente al centro */
-    left: 50%;
-    /* Posiciona horizontalmente al centro */
-    transform: translate(-50%, -50%);
-    /* Ajusta el elemento para que quede centrado */
-    white-space: nowrap;
-    /* Evita el salto de línea y asegura que el texto permanezca en una sola línea */
-    max-width: 100%;
-    /* Asegura que el texto no exceda el ancho del contenedor */
-    overflow: hidden;
-    /* Oculta el texto que se desborda fuera del contenedor */
+    margin: 0 auto;
 }
 
-.infop1 {
-    width: 1110px;
-    background-color: rgba(255, 255, 255, 0.5);
-    /* Fondo blanco con 50% de opacidad */
-    padding: 55px;
-    position: absolute;
-    /* Permite que infop1 se posicione en relación con .paquete1 */
-    top: 50%;
-    /* Posiciona verticalmente al centro */
-    left: 50%;
-    /* Posiciona horizontalmente al centro */
-    transform: translate(-50%, -50%);
-    /* Ajusta el elemento para que quede centrado */
-}
-
-.infop1 p {
+.paquete1 p{
+    font-size: 24px;
     font-family: 'PT Sans', sans-serif;
-    font-size: 20px;
 }
 
-.infop1 h3 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 30px;
-    font-weight: lighter;
+.infop1{
+    margin: 0 210px;
+    padding-top: 350px;
 }
 
 /*Final del estilo para el programa*/
@@ -1175,66 +1141,114 @@ footer hr {
 
 /*Final del estilo footer*/
 
+
+
+@media (min-width: 1920px) {
+    .banner-content h1 {
+        padding-top: 117px;
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 123px;
+        margin: 0;
+        text-align: left;
+    }
+
+    .banner-content p {
+        font-size: 23px;
+        width: 555px;
+        text-align: justify;
+        margin-bottom: 20px;
+        word-spacing: -1px;
+    }
+
+    .mtb{
+        width: 562px;
+        height: auto;
+    }
+
+    .menu-bar ul.main-menu li a {
+        font-size: 25px;
+    }
+
+    .fa-solid, .fas {
+        width: 24px;
+        height: auto;
+    }
+
+    .menu-bar ul.main-menu li {
+        margin-right: 95px;
+    }
+
+    .banner-content button {
+        width: 250px;
+        height: 91px;
+        font-size: 52px;
+        padding: 14px 28px;
+        border-radius: 14px;
+    }
+}
+
 /*=========================== Media query 1300px ===========================*/
-    @media screen and (max-width: 1300px) {
-        .hamburger-menu {
-            display: block;
-        }
-    
-        .menu-bar ul.main-menu {
-            display: none;
-        }
-    
-        .menu-bar.active .hamburger-dropdown {
-            display: flex;
-        }
-        .banner {
-            background: url('Banner/fondotablet900.png') no-repeat;
-            background-size: cover;
-            background-position: center;
-            height: 505px;
-            width: 100%;
-            margin: 0 auto;
-        }
-        .logo {
-            width: 50px;
-            height: auto;
-        }
-    
-        .banner-content {
-            margin: 0 85px;
-            color: white;
-        }
-    
-        .banner-content h1 {
-            padding-top: 100px;
-            font-size: 57px;
-            margin: 0;
-            text-align: left;
-        }
-    
-        .banner-content p {
-            font-size: 11px;
-            width: 260px;
-            text-align: justify;
-            margin-bottom: 20px;
-            word-spacing: -1px;
-        }
-    
-        .mtb {
-            width: 263px;
-            height: auto;
-        }
-    
-        .banner-content button {
-            width: 117px;
-            height: 42px;
-            font-size: 24px;
-            padding: 6px 13px;
-            border: none;
-            cursor: pointer;
-            border-radius: 6px;
-        }
+@media screen and (max-width: 1300px) {
+    .hamburger-menu {
+        display: block;
+    }
+
+    .menu-bar ul.main-menu {
+        display: none;
+    }
+
+    .menu-bar.active .hamburger-dropdown {
+        display: flex;
+    }
+
+    .banner {
+        background: url('Banner/fondotablet900.png') no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 505px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .logo {
+        width: 50px;
+        height: auto;
+    }
+
+    .banner-content {
+        margin: 0 85px;
+        color: white;
+    }
+
+    .banner-content h1 {
+        padding-top: 100px;
+        font-size: 57px;
+        margin: 0;
+        text-align: left;
+    }
+
+    .banner-content p {
+        font-size: 11px;
+        width: 260px;
+        text-align: justify;
+        margin-bottom: 20px;
+        word-spacing: -1px;
+    }
+
+    .mtb {
+        width: 263px;
+        height: auto;
+    }
+
+    .banner-content button {
+        width: 117px;
+        height: 42px;
+        font-size: 24px;
+        padding: 6px 13px;
+        border: none;
+        cursor: pointer;
+        border-radius: 6px;
+    }
 
 
     /*responsive ruta*/
@@ -1663,6 +1677,7 @@ footer hr {
     .faq {
         padding: initial;
     }
+
     .faq-content {
         width: 300px;
     }
@@ -1729,7 +1744,7 @@ footer hr {
         margin: 0 auto;
     }
 
-    .footer-info p{
+    .footer-info p {
         font-size: 20px;
         color: #283618;
     }
@@ -1748,21 +1763,22 @@ footer hr {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    color: #dcdcdc; /* Color blanco para la flecha */
+    color: #dcdcdc;
+    /* Color blanco para la flecha */
     font-size: 36px;
     z-index: 1000;
     cursor: pointer;
     display: none;
     text-align: center;
-    background-color: transparent; /* Fondo transparente */
-    border: none; /* Eliminar cualquier borde */
-    transition: color 0.3s; /* Transición suave del color */
+    background-color: transparent;
+    /* Fondo transparente */
+    border: none;
+    /* Eliminar cualquier borde */
+    transition: color 0.3s;
+    /* Transición suave del color */
 }
 
 .back-to-top:hover {
-    color: #dcdcdc; /* Color blanco más claro al pasar el ratón */
+    color: #dcdcdc;
+    /* Color blanco más claro al pasar el ratón */
 }
-
-
-
-
