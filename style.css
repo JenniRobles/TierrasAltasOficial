@@ -92,7 +92,10 @@ body {
     font-weight: 387;
 }
 
-.banner-content p {
+.textmovil{
+    display: none;
+}
+.textprincipal {
     font-size: 17px;
     width: 395px;
     text-align: justify;
@@ -437,20 +440,19 @@ body {
 }
 
 .paquete1 h3{
-    font-size: 42px;
+    font-size: 30px;
     font-family: 'Bebas Neue', sans-serif;
     font-weight: lighter;
     margin: 0 auto;
 }
 
 .paquete1 p{
-    font-size: 24px;
     font-family: 'PT Sans', sans-serif;
 }
 
 .infop1{
-    margin: 0 210px;
-    padding-top: 350px;
+    margin: 0 156px;
+    padding-top: 312px;
 }
 
 /*Final del estilo para el programa*/
@@ -1138,7 +1140,6 @@ footer hr {
     background-color: #283618;
     margin: 20px 0;
 }
-
 /*Final del estilo footer*/
 
 
@@ -1152,7 +1153,7 @@ footer hr {
         text-align: left;
     }
 
-    .banner-content p {
+    .textprincipal {
         font-size: 23px;
         width: 555px;
         text-align: justify;
@@ -1184,6 +1185,32 @@ footer hr {
         font-size: 52px;
         padding: 14px 28px;
         border-radius: 14px;
+    }
+
+    .paquete1{
+        background-image: url(Paquetes/fondopaquete1.png);
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .paquete1 h3{
+        font-size: 42px;
+        font-family: 'Bebas Neue', sans-serif;
+        font-weight: lighter;
+        margin: 0 auto;
+    }
+    
+    .paquete1 p{
+        font-size: 24px;
+        font-family: 'PT Sans', sans-serif;
+    }
+    
+    .infop1{
+        margin: 0 218px;
+        padding-top: 439px;
     }
 }
 
@@ -1227,7 +1254,7 @@ footer hr {
         text-align: left;
     }
 
-    .banner-content p {
+    .textprincipal {
         font-size: 11px;
         width: 260px;
         text-align: justify;
@@ -1294,6 +1321,8 @@ footer hr {
         margin: 0 auto;
     }
 
+
+    
     /*Responsive servicios y logistica*/
     .logTittle1 {
         font-family: 'Bebas Neue', sans-serif;
@@ -1458,8 +1487,13 @@ footer hr {
         text-align: left;
     }
 
-    .banner-content p {
-        font-size: 9px;
+    .textprincipal{
+        display: none;
+    }
+
+    .textmovil {
+        display: block;
+        font-size: 15px;
         width: 212px;
         text-align: justify;
         margin-bottom: 20px;
@@ -1567,6 +1601,32 @@ footer hr {
 
         padding: 5px 5px;
         font-size: 29px;
+    }
+
+    .paquete1{
+        background-image: url(Paquetes/fondomovilpaquete1.png);
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .paquete1 h3{
+        font-size: 29px;
+        font-family: 'Bebas Neue', sans-serif;
+        font-weight: lighter;
+        margin: 0 auto;
+    }
+    
+    .paquete1 p{
+        font-size: 15px;
+        font-family: 'PT Sans', sans-serif;
+    }
+    
+    .infop1{
+        margin: 0 34px;
+        padding-top: 222px;
     }
 
     /*responsive formulario*/
